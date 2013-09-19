@@ -1,0 +1,5 @@
+#!/usr/bin/osascript
+
+-- Tells the Rdio app to play the next track.
+
+tell app "Rdio" to play next track

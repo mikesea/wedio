@@ -1,0 +1,5 @@
+#!/usr/bin/osascript
+
+-- Pauses the Rdio player.
+
+tell app "Rdio" to pause

@@ -1,0 +1,7 @@
+#!/usr/bin/osascript
+
+-- Opens the Rdio for Mac app
+
+if not app "Rdio" is running then
+  tell app "Rdio" to activate
+end if

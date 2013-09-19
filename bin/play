@@ -1,0 +1,17 @@
+#!/usr/bin/osascript
+
+-- Plays an Rdio track, playlist, or album using the provided key.
+
+on run argv
+
+  if (count of argv) > 0 then
+
+    tell app "Rdio" to play source item 1 of argv
+
+  else
+
+    tell app "Rdio" to play
+
+  end if
+
+end argv

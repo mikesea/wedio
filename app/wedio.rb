@@ -4,5 +4,7 @@ require "bundler/setup"
 require "sinatra"
 
 require "app"
-require "api/controller"
+require "api/player_controller"
+require "api/searches_controller"
 require "models/player"
+require "models/rdio"

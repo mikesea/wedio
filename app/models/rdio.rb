@@ -8,8 +8,30 @@ module Wedio
                               :consumer_secret => ENV['RDIO_SECRET'])
     end
 
-    def self.find(query, type)
-      client.search(:query => query, :types => type)
+    def self.search_tracks(track_query)
+      search(track_query, "track")
+    end
+
+    def self.search_artists(artist_query)
+      search(artist_query, "artist")
+    end
+
+    def self.search_albums(album_query)
+      search(album_query, "album")
+    end
+
+    def self.search(query, types="track, album, artist")
+      response = client.search(:query => query, :types => types).results
+      block_given? ? yield(response) : response
+    end
+
+    def self.playback_key_for(response_object)
+      case response_object.type
+      when "t", "a"
+        response_object["key"]
+      when "r"
+        response_object["radioKey"]
+      end
     end
 
   end

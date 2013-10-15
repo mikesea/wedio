@@ -2,7 +2,7 @@ module Wedio
 
   class Player
 
-    def self.play key=nil
+    def self.play(key = nil)
       `./bin/play #{key}`
     end
 

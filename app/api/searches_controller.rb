@@ -14,7 +14,7 @@ module Wedio
     end
 
     get "/artists/search" do
-      Rdio.search_artists1(params[:q]).to_json
+      Rdio.search_artists(params[:q]).to_json
     end
 
     # GET /search/defeated%20no%20more%20disclosure/play

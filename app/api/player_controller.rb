@@ -3,7 +3,6 @@ module Wedio
 
     post "/play/:key" do
       Player.play(params[:key])
-      "Now playing: #{Player.current_track}"
     end
 
     put "/play" do
@@ -12,6 +11,10 @@ module Wedio
 
     put "/pause" do
       Player.pause
+    end
+
+    get "/current_track" do
+      Player.current_track
     end
 
     put "/next_track" do

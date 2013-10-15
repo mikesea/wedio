@@ -10,6 +10,10 @@ module Wedio
       `./bin/pause`
     end
 
+    def self.current_track
+      `./bin/current-track`
+    end
+
     def self.next_track
       `./bin/next-track`
     end
@@ -19,5 +23,4 @@ module Wedio
     end
 
   end
-
 end

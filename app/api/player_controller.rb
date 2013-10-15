@@ -3,6 +3,7 @@ module Wedio
 
     post "/play/:key" do
       Player.play(params[:key])
+      "Now playing: #{Player.current_track}"
     end
 
     put "/play" do

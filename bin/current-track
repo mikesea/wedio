@@ -1,0 +1,13 @@
+#!/usr/bin/osascript
+
+-- Returns the title and artist of the current track
+
+tell app "Rdio"
+  
+  set theArtist to the artist of current track
+
+  set theName to the name of current track
+
+  return theName & " by " & theArtist
+
+end tell
